@@ -5,6 +5,7 @@ import ResetPassword from '../../components/password-reset/ResetPassword'
 const Entry = () => {
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
+    
     const handleChange = (e) =>{
         const {name,value} = e.target
         if(name == 'email'){
@@ -22,10 +23,15 @@ const Entry = () => {
     }
       
 }
+
+
   return (
     <div>
+             <Login handleSubmit={handleSubmit} handleChange={handleChange}  email={email} password={password}/>
+            
+        
 
-        <Login handleSubmit={handleSubmit} handleChange={handleChange} email={email} password={password}/>
+        
         
     </div>
   )
